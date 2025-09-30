@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>個人履歷</title>
+  <style>
+    :root{
+      --bg:#f6f8fb; --card:#ffffff; --accent:#2b6cb0; --muted:#6b7280; --glass: rgba(255,255,255,0.6);
+      --maxw:900px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans TC', 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{background:linear-gradient(180deg,var(--bg),#ffffff);padding:28px;display:flex;justify-content:center}
+    .resume{width:100%;max-width:var(--maxw);background:var(--card);border-radius:14px;box-shadow:0 10px 30px rgba(20,20,40,0.08);overflow:hidden}
+    .header{display:flex;gap:20px;padding:28px;background:linear-gradient(90deg, rgba(43,108,176,0.08), rgba(43,108,176,0.02));align-items:center}
+    .photo{width:140px;height:140px;border-radius:12px;flex:0 0 140px;overflow:hidden;border:4px solid var(--glass);display:flex;align-items:center;justify-content:center;background:#eef4fb}
+    .photo img{width:100%;height:100%;object-fit:cover;display:block}
+    .meta{flex:1}
+    h1{margin:0;font-size:20px;color:#0f172a}
+    p.role{margin:6px 0 0;color:var(--muted)}
+    .contact{margin-top:12px;display:flex;flex-wrap:wrap;gap:10px;color:var(--muted);font-size:14px}
+    .container{display:grid;grid-template-columns:1fr 340px;gap:22px;padding:24px}
+    .col-left{min-width:0}
+    section.card{background:linear-gradient(180deg, rgba(250,250,252,0.8), #fff);padding:18px;border-radius:10px;margin-bottom:16px}
+    section.card h3{margin:0 0 10px;font-size:16px;color:var(--accent)}
+    ul{margin:0;padding-left:18px;color:#111827}
+    li{margin:6px 0}
+    .small{color:var(--muted);font-size:13px}
+    /* right column layout */
+    .col-right{position:relative}
+    .tag{display:inline-block;background:rgba(43,108,176,0.08);color:var(--accent);padding:6px 8px;border-radius:8px;font-size:13px;margin-right:8px}
+    .skills{display:flex;flex-wrap:wrap;gap:8px}
+    /* responsive */
+    @media (max-width:880px){
+      .container{grid-template-columns:1fr;}
+      .col-right{order:2}
+      .header{flex-direction:row}
+    }
+    /* printable tweaks */
+    @media print{body{padding:0} .resume{box-shadow:none;border-radius:0} .container{padding:0} .header{padding:12px}}
+  </style>
+</head>
+<body>
+  <article class="resume" id="resume">
+    <header class="header">
+      <div class="photo">
+        <img src="photo.jpg" alt="個人照片" />
+      </div>
+      <div class="meta">
+        <h1>姓名（請改為你的中文或英文全名）</h1>
+        <p class="role">應徵職位 / 個人簡短一句話自我介紹（例如：樂於解決問題的前端工程師）</p>
+        <div class="contact">
+          <div>📧 <span class="small">email@example.com</span></div>
+          <div>📞 <span class="small">+886 9xx-xxx-xxx</span></div>
+          <div>📍 <span class="small">台北市 / 可遠端</span></div>
+          <div>🔗 <span class="small">LinkedIn / GitHub / 個人網站</span></div>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <main class="col-left">
+        <section class="card">
+          <h3>幹部經歷</h3>
+          <ul>
+            <li><strong>職位名稱 — 組織/單位</strong> <span class="small">（年份範圍）</span>
+              <div class="small">簡短描述你負責的工作、成就或數字化成果（例如帶領 12 人團隊、提升活動參與率 30%）</div>
+            </li>
+            <li><strong>職位名稱 — 組織/單位</strong> <span class="small">（年份範圍）</span>
+              <div class="small">簡短描述第二項幹部經歷</div>
+            </li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h3>服務學習 / 志工經驗</h3>
+          <ul>
+            <li><strong>活動或專案名稱</strong> <span class="small">（日期）</span>
+              <div class="small">你在其中的角色、做了什麼、影響或反思（例如：負責課後輔導、協助募集物資）</div>
+            </li>
+            <li><strong>活動或專案名稱</strong> <span class="small">（日期）</span>
+              <div class="small">第二筆服務學習內容</div>
+            </li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h3>比賽獲獎</h3>
+          <ul>
+            <li><strong>獎項名稱 / 比賽名稱</strong> <span class="small">（年份）</span>
+              <div class="small">簡短說明比賽內容與你獲得的名次或成就</div>
+            </li>
+            <li><strong>獎項名稱 / 比賽名稱</strong> <span class="small">（年份）</span>
+              <div class="small">第二筆獲獎紀錄</div>
+            </li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h3>社團經歷</h3>
+          <ul>
+            <li><strong>社團名稱 — 扮演角色</strong> <span class="small">（年份）</span>
+              <div class="small">你在社團中做了些什麼、是否擔任幹部、或推動過的專案活動</div>
+            </li>
+            <li><strong>社團名稱 — 扮演角色</strong> <span class="small">（年份）</span>
+              <div class="small">第二筆社團經歷</div>
+            </li>
+          </ul>
+        </section>
+      </main>
+
+      <aside class="col-right">
+        <section class="card">
+          <h3>個人摘要</h3>
+          <p class="small">一句話或三到四行的個人專業摘要，說明你的核心能力、工作態度或職涯目標（例如：注重溝通與跨部門協作，擅長專案管理與資料分析）</p>
+        </section>
+
+        <section class="card">
+          <h3>休閒嗜好</h3>
+          <div class="small">喜歡的活動可以列點：例如 鋼琴、籃球、攝影、旅行、爬山、閱讀等。</div>
+          <div style="margin-top:10px" class="skills">
+            <span class="tag">鋼琴</span>
+            <span class="tag">旅遊</span>
+            <span class="tag">攝影</span>
+            <span class="tag">登山</span>
+          </div>
+        </section>
+
+        <section class="card">
+          <h3>額外資訊</h3>
+          <ul>
+            <li class="small">語言：中文（母語）、英文（中高）</li>
+            <li class="small">證照：證照名稱（發照機關 / 年份）</li>
+            <li class="small">可於面試提供作品集或推薦人</li>
+          </ul>
+        </section>
+      </aside>
+    </div>
+  </article>
+</body>
+</html>
